@@ -67,7 +67,7 @@ class LMessage(BaseMessage):
 class SetMessage(BaseMessage):
     base64payload = True
 
-    TemperatureAndMode = 0x440000000
+    TemperatureAndMode = 0x040000000 # Changed RF flags from 0x04 to 0x00 to address device vice a room (which set valves randomly) - see https://github.com/Bouni/max-cube-protocol/blob/master/S-Message.md
     Program = 0x410000000
     Temperatures = 0x11000000
     ValveConfig = 0x0412000000
